@@ -11,6 +11,6 @@ To develop this website, you can download the files and create a repository of y
 # The website prints "yes"
 print("yes")
 ```
-Once all your updates are done, [send an email to me](mailto:fantastikbruh@gmail.com) with `[Any Repository Update] {Your username}` as the heading, with the link to your repository in the body. No more is needed, but feel free to put in a list of the updates that you made.
+Once all your updates are done, [send an email to me](mailto:fantastikbruh@gmail.com) with `[Any Repository Update] {Your username}` as the heading, and the link to your repository in the body. No more is needed, but feel free to put in a list of the updates that you made.
 
 ### To all the people that help develop this website, thank you!
