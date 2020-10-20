@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Any: Login</title>
+		<link rel="stylesheet" href="/static/styles.css">
+	</head>
+	<body>
+		<form action="/register" method="post">
+
+			<div class="container">
+				<label for="uname"><b>Username</b></label>
+				<input type="text" placeholder="Enter Username" name="username" required>
+
+				<label for="psw"><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="password" required>
+
+				<label for="con"><b>Confirm Password</b></label>
+				<input type="password" placeholder="Re-enter Password" name="con" required>
+
+				<button type="submit">Register</button>
+			</div>
+
+			<div class="container" style="background-color:#f1f1f1">
+				<button type="button" class="cancelbtn">Cancel</button>
+				<span class="psw">Forgot <a href="/forgot">password?</a></span>
+			</div>
+		</form>
+	</body>
+</html>

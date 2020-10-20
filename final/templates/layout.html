@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/static/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>{% block title %}{% endblock %} | Any</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body onload="getWidth">
+        <div class="menu">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            <img class="logo" src="/static/logo.png">
+            <a class="profile" href="/profile">
+                <div id="profilediv">
+                    <p id="username"></p>
+                    <img id="profilepic" src="/static/logo.png">
+                </div>
+                <div class="need">
+                    <p id="username_">{{username}}</p>
+                </div>
+            </a>
+            <div id="mySidenav" class="sidenav">
+                <a class="closebtn" onclick="closeNav()">&times;</a>
+                <img class="logo" src="/static/logo-w.png">
+                <a href="/">Home</a>
+                <a href="/friends">Friends</a>
+                <a href="/groups" style="display:none;">Groups</a>
+                <a href="/register">Register</a>
+                <a id="log"></a>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+        <script src="/static/layout/layout.js"></script>
+        <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace('content');
+        </script>
+    </body>
+</html>

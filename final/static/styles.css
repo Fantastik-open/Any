@@ -1,0 +1,382 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+a {
+  cursor: pointer;
+}
+
+.logo {
+  height: 30px;
+  position: absolute;
+  top: 25px;
+  left: 60px;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  border-width: 0px 5px 1px;
+  border-style: solid;
+  border-color: #111 #111 #fff;
+
+}
+
+.sidenav #log{
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  border: none;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 8px;
+  left: -11px;
+  font-size: 36px;
+  border: none;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+.leftcolumn_ {
+  float: left;
+  width: 100%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: rgba(241, 241, 241, 0);
+  padding-left: 20px;
+}
+
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+.create {
+  text-align: center;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  padding:5px;
+  border: 1px solid black;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.linkhead {
+  color: black;
+  text-decoration: none;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/*
+  Teapot for your pleasure
+
+       _...._
+     .'  _ _ `.
+    | ."` ^ `". _,
+    \_;`"---"`|//
+      |       ;/
+      \_     _/
+        `"""`
+*/
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* Bordered form */
+form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+.profile{
+  float: right;
+  height: 30px;
+  color: #000;
+  font-family: serif;
+}
+
+.profile #profilepic{
+  float: right;
+  height: 30px;
+  width:30px;
+  position: absolute;
+  top: 25px;
+  right: 17px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.profile #username{
+  float: right;
+  height: 30px;
+}
+
+.genhead {
+  color: white;
+}
+
+.geninf {
+  width: 20%;
+  background: linear-gradient(0deg, white 65%, black 65%);
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: fixed;
+  right: 50px;
+  top: 100px;
+}
+
+.ugeninf {
+  width: 20%;
+  background: linear-gradient(0deg, white 67.5%, black 67.5%);
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: fixed;
+  right: 50px;
+  top: 100px;
+}
+
+.post-title-create {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.post-content-create {
+  height: 100px;
+  width: 100%;
+  resize: none;
+  padding: 14px 21px;
+  background-color: white;
+  border: 1px solid #ccc;
+  color: black;
+  font-size: 12px;
+}
+
+.post-content-create:empty:before{
+  color: #757575;
+  content: attr(data-text)
+}
+
+.createbtn {
+  background-color: white;
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.settingsbtn {
+  float: right;
+  position: relative;
+  right: 10px;
+  font-size: 10px;
+}
+
+.settingsmenu button {
+  width: 24.5%;
+  background-color: white;
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.settingsmenu .danger {
+  color: white;
+  background-color: red;
+  border: 1px solid red;
+}
+
+.actionbuttonup, .actionbuttondown {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  width: 7%;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  transition: color 0.5s;
+}
+
+.actionbuttonup:hover {
+  color: red;
+}
+
+.actionbuttondown:hover {
+  color: blue;
+}
+
+.upform, .downform {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+.apology {
+  background-color: blue;
+}
+
+.need {
+  display: none;
+}
+
+.cancel_btn {
+  background-color: lightgray;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100%;
+  height: 42px;
+}
+
+.rmbtn {
+  background-color: white;
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100%;
+  height: 42px;
+}
+
+.rmbtn:hover {
+  background-color: red;
+  color: white;
+}

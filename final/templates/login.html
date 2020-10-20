@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+	<form action="/login" method="post">
+
+		<div class="container">
+			<label for="uname"><b>Username</b></label>
+			<input type="text" placeholder="Enter Username" name="uname" required>
+
+			<label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="psw" required>
+
+			<button type="submit">Login</button>
+			<label>
+				<input type="checkbox" checked="checked" name="remember"> Remember me
+			</label>
+		</div>
+
+		<div class="container" style="background-color:#f1f1f1">
+			<button type="button" class="cancelbtn">Cancel</button>
+			<div class="psw">
+				<p><a href="/forgot">Forgot your password?</a></p>
+				<p>Don't have an account? <a href="/register">Register for one.</a></div></p>
+		</div>
+	</form>
+{% endblock %}

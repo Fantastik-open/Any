@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}Create Post{% endblock %}
+
+{% block content %}
+    <div class=create-page>
+        <h1>Create Post</h1>
+        <form id="create-post" action="/create" method="post">
+            <input type="file"  name="img" accept="image/png, .jpeg, .jpg, image/gif">
+            <input name="title" class="post-title-create" type="text" placeholder="Title" required>
+            <textarea name="content" form="create-post"></textarea><br>
+            <input type="submit">
+        </form>
+    </div>
+{% endblock %}

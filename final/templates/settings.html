@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}Settings{% endblock %}
+
+{% block content %}
+
+    <div class="settingsmenu">
+        <a href="#profile"><button>Profile</button></a>
+        <a href="#account"><button>Account</button></a>
+        <a href="#premium"><button>Premium</button></a>
+        <a href="#danger"><button class="danger">Danger Zone</button></a>
+    </div>
+
+    <div id="profile">
+        <h1>Profile</h1>
+        <p>Edit display name, give flairs</p>
+        <form class="changename" formaction="{{ url_for('profileupdate') }}" method="post">
+            <input type="text" name="newname" placeholder="New Display Name">
+            <input type="submit">
+        </form>
+        <form class="flair" formaction="{{ url_for('profileupdate') }}" method="post">
+            <label for="flair-">New Flair:</label>
+            <input type="text" name="flair-" placeholder="Enter Flair Here">
+            <input type="submit">
+        </form>
+    </div>
+
+    <div id="account">
+        <h1>Account</h1>
+        <p>Set email, change password</p>
+        <form class="setemail" formaction="{{ url_for('profileupdate') }}" method="post">
+            <input type="email" name="email" placeholder="E-mail">
+            <input type="submit">
+        </form>
+        <form class="changepassword" formaction="{{ url_for('profileupdate') }}" method="post">
+            <input type="password" name="oldpwd" placeholder="Old Password">
+            <input type="password" name="newpwd" placeholder="New Password">
+            <input type="password" name="newcon" placeholder="Confirm New Password">
+            <input type="submit">
+        </form>
+    </div>
+
+    <div id="premium">
+        <h1>Premium</h1>
+        <p>Buy premium</p>
+    </div>
+
+    <div id="danger">
+        <h1>Danger Zone</h1>
+        <p>Delete account</p>
+        <button id="unbecome" onclick="tried()">Delete Account</button>
+    </div>
+
+{% endblock %}

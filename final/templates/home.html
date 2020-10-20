@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="leftcolumn_">
+            <a href="/create" class="linkhead">
+                <div class="create">
+                    <p>Create New Post</p>
+                </div>
+            </a>
+            {% for thing in list %}
+                <div class="card">
+                    <h2>{{thing['post_title']}}</h2>
+                    <h6>posted by <a href="users/{{thing['poster_id']}}">{{thing["poster_name"]}}</a>, on {{thing["post_time"]}} UTC</h6>
+                    <div id="posttext">{{ thing["post_text"]|safe }}</div>
+                    <div class="postactionbar">
+                        <a href="/upvote">
+                            <button class="actionbuttonup"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+                        </a>
+                        <a href="/downvote">
+                            <button class="actionbuttondown"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

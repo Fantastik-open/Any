@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}{{username_}}{% endblock %}
+
+{% block content %}
+    <div class="ugeninf">
+        <div class="genhead">
+            <h1>General Information</h1>
+        </div>
+        <ul style="list-style-type:none;margin:0;padding:0;">
+            <li>Posts</li>
+            <li>{{posts}}</li>
+            <li>Followers</li>
+            <li>{{followers}}</li>
+            <li>Following</li>
+            <li>{{following}}</li>
+        </ul>
+        <a href="/follow">
+            <button class="createbtn">Follow</button>
+        </a>
+        <a href="{{href}}">
+            <button class="{{style}}">{{status}}</button>
+        </a>
+    </div>
+    {% for thing in list %}
+        <div class="card" style="width:75%;">
+            <h2>{{thing['post_title']}}</h2>
+            <h6>{{username_}} posted this on {{thing["post_time"]}} UTC</h6>
+            <div id="posttext">{{ thing["post_text"]|safe }}</div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
